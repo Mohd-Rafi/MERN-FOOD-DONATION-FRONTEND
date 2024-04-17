@@ -18,7 +18,7 @@
     font-size: larger;
   }
   .listing-container-home {
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(223, 233, 234);
     border-radius: 25px;
     box-shadow: 0 0 10px grey;
     display: flex;
@@ -26,8 +26,10 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 30px;
-    width: 100%;
+    width: 91%;
     padding: 20px;
+    margin: 0px auto;
+    /* margin-bottom: 500px;   */
   }
   .listing-card {
     display: flex;

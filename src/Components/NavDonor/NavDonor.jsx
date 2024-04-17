@@ -21,7 +21,7 @@ const NavDonor = props => {
   const getProfileDetails = async () => {
     const response = await customAxios.get(`/donor/profile/${getLoggedInId()}`);
     setData(response.data);
-    console.log(response.data);
+    // console.log(response.data);
   };
   const onChange = (e, key) => {
     setData({ ...data, [key]: e.target.value });
@@ -71,6 +71,7 @@ const NavDonor = props => {
         `http://localhost:3000/donor/profile/update/${getLoggedInId()}`,
         data
       );
+      getProfileDetails();
       handleClose();
     } catch (e) {
       console.log(e);
