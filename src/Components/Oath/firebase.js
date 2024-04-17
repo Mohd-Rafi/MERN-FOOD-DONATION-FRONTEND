@@ -6,7 +6,7 @@ import { initializeApp } from 'firebase/app';
 // Your web app's Firebase configuration
 const firebaseConfig = {
   //   apiKey: import.meta.env.FIRE_BASE_API,
-  apiKey: 'AIzaSyCDJ7kjJUiUHatU7Di4GMXVcc8nVdTrvc0',
+  apiKey: process.env.FIRE_BASE_API,
   authDomain: 'food-donation-mern.firebaseapp.com',
   projectId: 'food-donation-mern',
   storageBucket: 'food-donation-mern.appspot.com',
