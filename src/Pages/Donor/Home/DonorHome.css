@@ -1,0 +1,82 @@
+.hea {
+  margin-left: 25px;
+  font-weight: bolder;
+  font-size: larger;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(153, 13, 13);
+}
+.donor-home-main-donor-listings {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  font-weight: bolder;
+
+  .header {
+    font-size: larger;
+  }
+  .listing-container-home {
+    background-color: rgb(180, 180, 180);
+    border-radius: 25px;
+    box-shadow: 0 0 10px grey;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+  }
+  .listing-card {
+    display: flex;
+    height: 310px;
+    width: 300px;
+    align-items: flex-start;
+    padding: 10px 20px;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 2px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    img {
+      height: 150px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .listing-card-loc-category {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .listing-card-time {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+  .listing-card:hover {
+    scale: 1.05;
+    transition: all 500ms;
+    box-shadow: 0 0 15px 0 red;
+    /* width: 320px; */
+
+    img {
+      scale: 1.05;
+      transition: all 500ms;
+    }
+    p {
+      font-weight: 600;
+      transition: all 500ms;
+    }
+  }
+}

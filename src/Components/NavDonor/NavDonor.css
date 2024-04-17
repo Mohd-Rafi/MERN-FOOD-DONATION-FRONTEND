@@ -1,0 +1,130 @@
+.navdonor {
+  height: 70px;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 25px;
+  img {
+    height: 70%;
+  }
+}
+.navdonor-right-items {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  .navdonor-link {
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .navdonor-link:hover {
+    scale: 1.08;
+    transition: all 500ms;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+}
+
+.active {
+  color: red;
+}
+.donor-profile-edit-main-container {
+  background-color: rgb(232, 230, 230);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  gap: 25px;
+
+  .donor-profile-edit-main-container-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    img {
+      height: 130px;
+      width: 130px;
+      object-fit: contain;
+      border-radius: 100%;
+    }
+    .upload-profile-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .btn {
+        display: flex;
+        align-items: center;
+      }
+    }
+    button {
+      background-color: blanchedalmond;
+      padding: 9px 15px;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+    }
+    button:hover {
+      box-shadow: 0 0 3px 0 red;
+      transition: all 500ms;
+    }
+  }
+  .donor-profile-edit-main-container-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    input {
+      height: 34px;
+      width: 270px;
+      border-radius: 15px;
+      padding: 5px 15px;
+      border: none;
+      background-color: rgb(203, 210, 210);
+    }
+    input:hover {
+      scale: 1.1;
+      transition: 500ms;
+    }
+  }
+  .donor-profile-edit-main-container-details-addList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 15px;
+      background-color: rgb(90, 16, 24);
+      color: white;
+      border-radius: 10px;
+      border: none;
+    }
+    button:hover {
+      scale: 1.1;
+      transition: all 500ms;
+      cursor: pointer;
+    }
+  }
+  .addandlogbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    .addlistbtn {
+      background-color: rgb(4, 45, 31);
+    }
+    .logoutbtn {
+      background-color: rgb(16, 58, 85);
+    }
+  }
+}

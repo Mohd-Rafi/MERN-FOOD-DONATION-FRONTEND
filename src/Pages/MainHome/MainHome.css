@@ -1,0 +1,224 @@
+.main-home {
+  width: 98vw;
+  height: 100vh;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar-main {
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(8px);
+  height: 8%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  img {
+    height: 95%;
+    width: 55px;
+  }
+}
+.navbar-main img {
+  border-radius: 25px;
+}
+.navbar-main-center-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin-left: 40%;
+}
+.navbar-main-center-items a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(5, 63, 33);
+}
+.navbar-main-center-items a:hover {
+  color: rgb(5, 184, 91);
+  cursor: pointer;
+}
+
+.navbar-main-join-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: brown;
+}
+
+.navbar-main-join-now button {
+  border-radius: 20px;
+  padding: 10px 40px;
+  color: white;
+  font-weight: 600;
+  background-color: rgb(32, 40, 83);
+}
+.navbar-main-join-now button:hover {
+  scale: 1.1;
+}
+.drawer-icons {
+  display: none;
+}
+.navbar-main-join-now button:hover {
+  box-shadow: 0 0 8px 0 rgb(235, 79, 79);
+  transition: 500ms;
+}
+
+.main-home-main-content {
+  z-index: 1;
+  margin-top: 20px;
+  display: flex;
+  height: 70%;
+  padding: 20px 55px;
+  align-items: center;
+}
+.main-home-main-content-left {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  padding: 50px 5px;
+}
+.main-home-main-content-left-heading {
+  font-size: 20px;
+  .head1 {
+    color: rgb(221, 118, 7);
+  }
+  .head2 {
+    color: black;
+  }
+}
+.main-home-main-content-left-lorem {
+  width: 80%;
+}
+.main-home-main-content-left-button {
+  button {
+    margin-top: 20px;
+    background-color: rgb(67, 65, 65);
+    color: white;
+    padding: 10px 35px;
+    border-radius: 20px;
+    border: 2px solid rgb(248, 156, 156);
+  }
+  button:hover {
+    scale: 1.1;
+    transition: 500ms;
+  }
+}
+.main-home-main-content-img {
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  img {
+    padding: 20px 20px;
+  }
+}
+.main-foundations {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 65px 20px;
+  gap: 30px;
+}
+
+.main-foundations-items {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 155px;
+  justify-content: center;
+}
+.main-foundations-items .bold {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: Arial;
+}
+.main-foundations-items .cards .sample {
+  display: none;
+}
+.main-foundations-items .cards {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  padding: 25px 25px;
+}
+.main-foundations-items .cards:hover {
+  box-shadow: 1px 5px 8px 0px red;
+  border-radius: 20px;
+  scale: 1.1;
+  transition: all 500ms;
+}
+.main-foundations-items .cards img {
+  height: 155px;
+}
+.navbar-main-join-now {
+  display: flex;
+  gap: 25px;
+}
+.drawer-items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: start;
+  width: 100%;
+  a {
+    width: 50%;
+    color: black;
+    font-family: 'Calibri';
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 22px;
+  }
+  a:hover {
+    scale: 1.1;
+    color: blue;
+    transition: all 500ms;
+    border-bottom: 1px solid black;
+  }
+}
+.drawer-icons:hover {
+  color: rgb(41, 137, 137);
+}
+@media screen and (max-width: 768px) {
+  .navbar-main-center-items {
+    display: none;
+  }
+  .main-home-main-content-img {
+    display: none;
+  }
+  .drawer-icons {
+    display: flex;
+  }
+  .main-foundations-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .cards {
+      height: 190px;
+    }
+    img {
+      height: 20px;
+    }
+  }
+}
+/* Mobile */
+/* @media screen and (max-width: 600px) {
+  .card {
+    background-color: red;
+  }
+} */
