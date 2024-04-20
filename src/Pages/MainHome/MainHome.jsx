@@ -55,14 +55,14 @@ const MainHome = () => {
             open={open}
             styles={drawerStyles}
           >
-            <Fade direction="right">
+            <Slide direction="left">
               <div className="drawer-items" onClick={onClose}>
                 <a href="#home">Home</a>
                 <a href="#foundations">Foundations</a>
                 <a href="#events">Events</a>
                 <a href="#aboutus">About Us</a>
               </div>
-            </Fade>
+            </Slide>
           </Drawer>
         </div>
       </div>
