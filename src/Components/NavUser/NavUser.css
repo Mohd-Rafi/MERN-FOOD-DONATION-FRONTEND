@@ -1,0 +1,23 @@
+.navUser-main {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 25px;
+  .navUser-main-cont-right {
+    display: flex;
+    gap: 25px;
+    color: black;
+    font-size: 17px;
+    .NavLink {
+      text-decoration: none;
+    }
+    .NavLink:hover {
+      scale: 1.1;
+      transition: 500ms;
+    }
+  }
+}
+.active {
+  color: rgb(196, 23, 23);
+}

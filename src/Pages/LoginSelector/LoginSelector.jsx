@@ -13,7 +13,7 @@ const LoginSelector = () => {
           <div
             className="login-selector-main-container-donor"
             onClick={() => {
-              navigate('/reciever/sign-up');
+              navigate('/user/login');
             }}
           >
             <span className="login-selector-main-reciver">

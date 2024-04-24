@@ -36,7 +36,7 @@ const SignUp = () => {
       console.log(error);
     }
   };
-  s;
+
   return (
     <div className="user-sign-up-main">
       <div className="user-sign-up-main-card">
