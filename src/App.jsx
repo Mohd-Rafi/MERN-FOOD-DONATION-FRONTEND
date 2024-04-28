@@ -12,6 +12,7 @@ import ListingDetails from './Pages/Donor/ListingDetails/ListingDetails';
 import UserLogin from './Pages/User/Login/Login';
 import USerSignUp from './Pages/User/SignUp/SignUp';
 import UserHome from './Pages/User/Home/Home';
+import DonationDetails from './Pages/User/DonationDetails/DonationDetails';
 
 const App = () => {
   return (
@@ -30,6 +31,8 @@ const App = () => {
       </Route>
       <Route element={<PrivateRoute role="USER" path="/user/login" />}>
         <Route path="/user/home" element={<UserHome />} />
+        <Route path="/user/donationDetails/:id" element={<DonationDetails />} />
+
         {/* <Route path="/donor/listing" element={<AddListing />} /> */}
         {/* <Route path="/donor/listingDetails/:id" element={<ListingDetails />} /> */}
       </Route>

@@ -6,6 +6,7 @@
   padding: 5px 25px;
   .navUser-main-cont-right {
     display: flex;
+    align-items: center;
     gap: 25px;
     color: black;
     font-size: 17px;
@@ -15,6 +16,16 @@
     .NavLink:hover {
       scale: 1.1;
       transition: 500ms;
+    }
+    img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+    img:hover {
+      scale: 1.1;
+      transition: 200ms;
     }
   }
 }

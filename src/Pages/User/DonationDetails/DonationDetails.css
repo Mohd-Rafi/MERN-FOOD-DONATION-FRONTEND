@@ -1,0 +1,123 @@
+.donationDetails-main {
+  height: 100vh;
+  width: 100vw;
+  /* display: flex;
+  align-items: center;
+  flex-direction: column; */
+  .donationDetails-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    background-color: antiquewhite;
+    width: 90%;
+    margin: 0px auto;
+    border-radius: 25px;
+    .donationDetails-main-container-image {
+      width: 50%;
+      background-color: rgba(255, 240, 240, 0.36);
+      padding: 20px 25px;
+      img {
+        height: 400px;
+        object-fit: contain;
+      }
+    }
+    .listing-details-main-container-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .items-list-item-name {
+        display: flex;
+        gap: 20px;
+        span {
+          font-weight: 700;
+        }
+      }
+      .blabla {
+        display: flex;
+        justify-content: space-around;
+        width: 350px;
+        background-color: rgba(0, 255, 255, 0.097);
+        padding: 10px 0px;
+        border-radius: 10px;
+      }
+      .itemcategoryVeg {
+        background-color: rgb(25, 125, 25);
+        color: white;
+        width: max-content;
+        padding: 9px 25px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .itemcategoryNonVeg {
+        background-color: rgb(203, 69, 7);
+        color: white;
+        width: max-content;
+        padding: 9px 25px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+    }
+  }
+  .donationDetails-main-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px auto;
+    gap: 20px;
+
+    .cart-btn {
+      background-color: rgb(68, 57, 57);
+      color: white;
+      padding: 10px 0px;
+      border-radius: 10px;
+      border: 1px solid rgb(185, 181, 181);
+      font-weight: 500;
+    }
+    .cart-btn:hover {
+      scale: 1.04;
+      transition: 200ms;
+    }
+    .book-btn {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      padding: 10px 0px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+    .book-btn:hover {
+      scale: 1.04;
+      transition: 200ms;
+    }
+  }
+}
+
+/* .itemcategoryNonVeg {
+  color: rgb(181, 68, 12);
+}
+.itemcategoryVeg{
+  color: green;
+} */
+
+/* .donationDetails-main-container {
+  width: 90%;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(247, 243, 243);
+
+  .donationDetails-main-container-image {
+    border-radius: 25px;
+    width: 500px;
+    height: 500px;
+
+    img {
+      height: 410px;
+      padding: 0 150px;
+      object-fit: contain;
+    }
+  }
+} */
