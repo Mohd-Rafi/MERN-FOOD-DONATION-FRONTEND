@@ -13,6 +13,8 @@ import UserLogin from './Pages/User/Login/Login';
 import USerSignUp from './Pages/User/SignUp/SignUp';
 import UserHome from './Pages/User/Home/Home';
 import DonationDetails from './Pages/User/DonationDetails/DonationDetails';
+import YourBookingsPage from './Pages/User/YourBookingsPage/YourBookings';
+import YourBookingDetailsPage from './Pages/User/YourBookingDetailsPage/YourBookingDetails';
 
 const App = () => {
   return (
@@ -29,10 +31,16 @@ const App = () => {
         <Route path="/donor/listing" element={<AddListing />} />
         <Route path="/donor/listingDetails/:id" element={<ListingDetails />} />
       </Route>
+
       <Route element={<PrivateRoute role="USER" path="/user/login" />}>
         <Route path="/user/home" element={<UserHome />} />
         <Route path="/user/donationDetails/:id" element={<DonationDetails />} />
-
+        <Route path="/user/your-bookings" element={<YourBookingsPage />} />
+        <Route
+          path="/user/your-bookings/details/:id"
+          element={<YourBookingDetailsPage />}
+        />
+        /user/your-bookings/details
         {/* <Route path="/donor/listing" element={<AddListing />} /> */}
         {/* <Route path="/donor/listingDetails/:id" element={<ListingDetails />} /> */}
       </Route>

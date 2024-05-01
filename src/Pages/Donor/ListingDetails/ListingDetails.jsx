@@ -7,6 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 import moment from 'moment/moment';
 
 import './ListingDetails.css';
+import { capitalize } from '@mui/material';
 
 const ListingDetails = () => {
   const { id } = useParams();
@@ -93,10 +94,24 @@ const ListingDetails = () => {
                 <p>{moment(listData.endTime, ['HH:mm']).format('hh:mm a')}</p>
               </div>
             </div>
-            <div className="items-list-item-name">
-              <span>Reciever Name: </span>
-              <p>{listOrderedData.user.name}</p>
-            </div>
+            {listOrderedData ? (
+              <div className="items-list-item-name">
+                <span>Order Booked By: </span>
+                <p>{listOrderedData.user.name}</p>
+              </div>
+            ) : (
+              <div className="items-list-item-name">
+                <span
+                  style={{
+                    color: 'red',
+                    textTransform: 'uppercase',
+                    fontWeight: 'bold',
+                  }}
+                >
+                  Your order is not yet booked by anyone
+                </span>
+              </div>
+            )}
           </div>
         </div>
         <div className="listingDetailsUpdateAndDeleteBtn">

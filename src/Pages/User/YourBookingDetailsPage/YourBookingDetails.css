@@ -1,0 +1,88 @@
+.your-booking-details-main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .your-booking-details-main-container {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(236, 236, 230);
+    border-radius: 10px;
+    .your-booking-details-main-container-image {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      right: 100px;
+    }
+    .your-booking-details-main-container-contents {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      position: relative;
+      right: 100px;
+      .itemcat {
+        background-color: rgb(201, 74, 10);
+        width: 100px;
+        color: white;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+      .item-veg {
+        background-color: rgb(21, 114, 12);
+        color: white;
+        text-align: center;
+        padding: 8px 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+/* // */
+.image-gallery-slides {
+  height: 400px;
+  width: 450px;
+  object-fit: fill;
+  img {
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 15px;
+  }
+}
+
+.image-gallery-thumbnails {
+  background-color: white;
+  border-radius: 15px;
+  img {
+    height: 80px;
+    width: 130px;
+    object-fit: fill;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .your-booking-details-main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .your-booking-details-main-container-image {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+
+  .image-gallery-slides {
+    padding: 0px 15px;
+    height: 300px;
+    width: 350px;
+  }
+}

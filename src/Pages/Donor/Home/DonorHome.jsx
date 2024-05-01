@@ -36,7 +36,9 @@ const DonorHome = () => {
             {listing.map(item => {
               return (
                 <div
-                  className="listing-card"
+                  className={`listing-card ${
+                    item.status == 'BOOKED' ? 'card-booked' : ''
+                  }`}
                   key={item._id}
                   onClick={() => onClickCard(item._id)}
                 >
@@ -44,12 +46,15 @@ const DonorHome = () => {
                   <p className="itemname">{item.name}</p>
                   <div className="listing-card-loc-category">
                     <p className="itemloc">Location: {item.location}</p>
-                    <p className="itemcat">Category: {item.category}</p>
+                    <p
+                      className={`itemcat ${
+                        item.category == 'Veg' ? 'item-veg' : ''
+                      }`}
+                    >
+                      {item.category}
+                    </p>
                   </div>
-                  <div className="listing-card-time">
-                    <p>Start Time: {item.startTime}</p>
-                    <p>End Time: {item.endTime}</p>
-                  </div>
+
                   <p>Status : {item.status}</p>
                 </div>
               );

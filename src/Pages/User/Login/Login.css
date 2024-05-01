@@ -6,6 +6,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .back-btn {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    color: white;
+  }
+  .back-btn:hover {
+    color: rgb(198, 194, 190);
+    transition: 200ms;
+  }
 }
 .user-sign-up-main-card {
   height: 80%;

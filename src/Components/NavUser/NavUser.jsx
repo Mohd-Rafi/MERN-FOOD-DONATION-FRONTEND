@@ -16,13 +16,18 @@ const NavUser = () => {
 
   return (
     <div className="navUser-main">
-      <div className="navUser-main-cont-left"></div>
+      <div className="navUser-main-cont-left">
+        <img src="/logo2.png" alt="" />
+      </div>
       <div className="navUser-main-cont-right">
         <NavLink className="NavLink" to={'/user/home'}>
           Home
         </NavLink>
-        <NavLink className="NavLink" to={'/user/cart'}>
-          Cart
+        <NavLink className="NavLink" to={'/user/favorites'}>
+          Favorites
+        </NavLink>
+        <NavLink className="NavLink" to={'/user/your-bookings'}>
+          Your Bookings
         </NavLink>
         <NavLink className="NavLink" to={'/user/login'}>
           Logout

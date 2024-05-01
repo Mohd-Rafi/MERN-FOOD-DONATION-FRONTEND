@@ -8,6 +8,9 @@ import customAxios from '../../../../utils/customAxios';
 import ClipLoader from 'react-spinners/ClipLoader';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './Login.css';
 import { Zoom } from 'react-awesome-reveal';
 
@@ -48,6 +51,14 @@ const Login = () => {
   return (
     <div className="user-sign-up-main">
       <ToastContainer />
+      <FontAwesomeIcon
+        icon={faCircleChevronLeft}
+        size="3x"
+        className="back-btn"
+        onClick={() => {
+          navigate('/login-selector');
+        }}
+      />
       <div className="user-sign-up-main-card">
         <img src={'/img6.png'} alt="not loaded" />
         <div className="user-sign-up-main-card-contents">

@@ -4,19 +4,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px 25px;
+  background-color: rgba(223, 232, 232, 0.815);
   .navUser-main-cont-right {
     display: flex;
     align-items: center;
     gap: 25px;
-    color: black;
     font-size: 17px;
-    .NavLink {
-      text-decoration: none;
-    }
-    .NavLink:hover {
-      scale: 1.1;
-      transition: 500ms;
-    }
     img {
       height: 40px;
       width: 40px;
@@ -28,6 +21,24 @@
       transition: 200ms;
     }
   }
+  .navUser-main-cont-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+    img {
+      height: 80%;
+    }
+  }
+}
+.NavLink {
+  text-decoration: none;
+  color: black;
+}
+.NavLink:hover {
+  scale: 1.1;
+  transition: 500ms;
 }
 .active {
   color: rgb(196, 23, 23);

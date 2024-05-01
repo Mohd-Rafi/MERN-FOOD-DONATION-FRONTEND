@@ -1,0 +1,82 @@
+.your-bookings-main {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.your-bookings-main-container {
+  min-height: 80%;
+  background-color: rgb(239, 235, 230);
+  width: 95%;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  .your-bookings-main-container-your-items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0px 25px;
+    gap: 20px;
+    flex-wrap: wrap;
+    .listing-card {
+      display: flex;
+      gap: 20px;
+      width: 50%;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 2px 0 black;
+      margin: 20px 0 10px 20px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 8px;
+      .item-card-contents {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin: 0 25px 0 0;
+        position: relative;
+        right: 60px;
+      }
+      .list-card-img {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      img {
+        height: 200px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .listing-card-loc-category {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        .itemcat {
+          background-color: rgb(201, 74, 10);
+          color: white;
+          text-align: center;
+          padding: 8px 5px;
+          border-radius: 10px;
+        }
+        .item-veg {
+          background-color: rgb(21, 114, 12);
+          color: white;
+          text-align: center;
+          padding: 8px 5px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .listing-card:hover {
+      box-shadow: 0 0 10px 0 orange;
+      scale: 1.02;
+      transition: 300ms;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { Carousel, ConfigProvider, Radio } from 'antd';
 import { width } from '@fortawesome/free-solid-svg-icons/fa0';
 import moment from 'moment';
 import { getLoggedInId } from '../../../../utils';
+import { Button, Modal } from 'antd';
 
 const DonationDetails = () => {
   const [donations, setDonations] = useState({ images: [], donor: '' });
@@ -16,29 +17,61 @@ const DonationDetails = () => {
   const getDonationsDetails = async () => {
     const response = await customAxios.get(`/listing/donation/details/${id}`);
     setDonations(response.data);
-    console.log(response.data);
   };
 
-  const onBookItem = async () => {
-    const response = await customAxios.post('/order', {
-      donor: donations.donor._id,
-      user: getLoggedInId(),
-      listing: id,
-    });
-    navigate('/user/home');
-  };
+  // const [yourListing, setYourListing] = useState({user:''});
+  // const getYourDonationsDetails = async () => {
+  //   const response = await customAxios.get(`/order/${id}`);
+  //   setYourListing(response.data[0]);
+  // };
+
+  // const onBookItem = async () => {
+  //   const response = await customAxios.post('/order', {
+  //     donor: donations.donor._id,
+  //     user: getLoggedInId(),
+  //     listing: id,
+  //   });
+  //   navigate('/user/home');
+  // };
 
   const onChange = currentSlide => {
     // console.log(currentSlide);
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = async () => {
+    const response = await customAxios.post('/order', {
+      donor: donations.donor._id,
+      user: getLoggedInId(),
+      listing: id,
+    });
+    setIsModalOpen(false);
+    // navigate('/user/home');
+    getDonationsDetails();
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     getDonationsDetails();
+    // getYourDonationsDetails();
   }, []);
   return (
     <div className="donationDetails-main">
       <NavUser />
       <div className="donationDetails-main-container">
+        <Modal
+          title="Basic Modal"
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>Do you want to book this listing..?</p>
+        </Modal>
         <div className="donationDetails-main-container-image">
           <ConfigProvider
             theme={{
@@ -115,12 +148,37 @@ const DonationDetails = () => {
           </div>
         </div>
       </div>
-      <div className="donationDetails-main-buttons">
-        <button className="cart-btn">Add to Cart</button>
-        <button className="book-btn" onClick={onBookItem}>
-          Book Item
-        </button>
-      </div>
+      {donations.status == 'FREE' ? (
+        <div className="donationDetails-main-buttons">
+          <button className="cart-btn">Add to Cart</button>
+          <button className="book-btn" onClick={showModal}>
+            Book Item
+          </button>
+        </div>
+      ) : (
+        <p
+          style={{
+            textAlign: 'center',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            color: 'red',
+          }}
+        >
+          You already booked this item
+        </p>
+        //   <p
+        //   style={{
+        //     textAlign: 'center',
+        //     fontWeight: 'bold',
+        //     textTransform: 'uppercase',
+        //     color: 'red',
+        //   }}
+        // >
+        //   {yourListing.user._id == getLoggedInId()
+        //     ? 'You already booked this item'
+        //     : 'this item is already booked by someone else'}
+        // </p>
+      )}
     </div>
   );
 };

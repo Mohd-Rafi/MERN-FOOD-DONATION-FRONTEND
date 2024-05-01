@@ -1,3 +1,14 @@
+.user-home-main-heading {
+  font-weight: bold;
+  font-size: large;
+  margin: 25px 0px 10px 30px;
+  text-transform: uppercase;
+  span {
+    margin-left: 5px;
+    color: rgb(153, 11, 11);
+  }
+}
+
 .user-home-main-main-container {
   padding: 20px 35px;
 }
@@ -16,7 +27,8 @@
     justify-content: space-around;
     flex-direction: column;
     gap: 2px;
-    border: 1px solid black;
+    box-shadow: 0 0 2px 0 black;
+
     border-radius: 10px;
     font-weight: 600;
     font-size: 17px;
@@ -41,20 +53,55 @@
       font-weight: 400;
       font-size: 14px;
     }
+    .itemcat {
+      background-color: rgb(201, 74, 10);
+      color: white;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+    .item-veg {
+      background-color: rgb(21, 114, 12);
+      color: white;
+      text-align: center;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
   }
   .listing-card:hover {
-    scale: 1.05;
+    scale: 1.03;
     transition: all 500ms;
-    box-shadow: 0 0 15px 0 red;
+    box-shadow: 0 0 10px 0 rgb(223, 115, 115);
+    border: none;
     /* width: 320px; */
 
     img {
       scale: 1.05;
       transition: all 500ms;
     }
-    p {
+    /* p {
       font-weight: 600;
+      transition: all 500ms;
+    } */
+  }
+  .card-booked {
+    /* display: none; */
+    background-color: rgba(228, 229, 229, 0.929);
+    font-weight: 600;
+  }
+  .card-booked:hover {
+    scale: 1;
+    box-shadow: none;
+    img {
+      scale: 1;
       transition: all 500ms;
     }
   }
+}
+.p-isEmpty {
+  font-weight: 600;
+  margin-top: 50px;
+  color: rgb(149, 32, 32);
+  font-size: larger;
+  text-transform: uppercase;
 }
