@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { UploadOutlined } from '@ant-design/icons';
 import { Button, message, Upload } from 'antd';
 // import img6 from '../../../../public/img6.png';
-import Oauth from '../../../Components/Oath/Oauth';
 import customAxios from '../../../../utils/customAxios';
 import ClipLoader from 'react-spinners/ClipLoader';
 import { ToastContainer, toast } from 'react-toastify';
@@ -12,6 +11,9 @@ import './Login.css';
 import { Zoom } from 'react-awesome-reveal';
 import { faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
+import generator from 'generate-password-ts';
 
 const Login = () => {
   const [data, setData] = useState({
@@ -43,6 +45,38 @@ const Login = () => {
     } catch (err) {
       setLoading(false);
       toast.error('Email or password incorrect', {
+        position: 'bottom-center',
+      });
+    }
+  };
+
+  const onGoogleLoginClick = async credentialResponse => {
+    try {
+      const credentialResponseDecoded = jwtDecode(
+        credentialResponse.credential
+      );
+      console.log(credentialResponseDecoded);
+      const response = await customAxios.post('/donor/google', {
+        name: credentialResponseDecoded.name,
+        email: credentialResponseDecoded.email,
+        image: credentialResponseDecoded.picture,
+        password: generator.generate({
+          length: 10,
+          numbers: true,
+        }),
+      });
+      if (response) {
+        localStorage.setItem('token', response.data.token);
+      }
+      toast.success('Login successfull', {
+        onClose: () => {
+          navigate('/donor/home');
+        },
+        autoClose: 1000,
+        position: 'bottom-center',
+      });
+    } catch (error) {
+      toast.error('Login Failed', {
         position: 'bottom-center',
       });
     }
@@ -87,7 +121,12 @@ const Login = () => {
               'Login'
             )}
           </button>
-          {/* <Oauth /> */}
+          <GoogleLogin
+            onSuccess={onGoogleLoginClick}
+            onError={() => {
+              console.log('Login Failed');
+            }}
+          />
           <span>
             New User.?
             <Link className="log" to="/donor/sign-up">
