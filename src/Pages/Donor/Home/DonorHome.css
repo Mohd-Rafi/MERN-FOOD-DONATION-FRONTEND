@@ -18,32 +18,21 @@
     font-size: larger;
   }
   .listing-container-home {
-    background-color: rgb(223, 233, 234);
-    border-radius: 25px;
     box-shadow: 0 0 10px grey;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 91%;
-    padding: 20px;
-    margin: 0px auto;
-    /* margin-bottom: 500px;   */
+    height: 350px;
+    border-radius: 8px;
   }
   .listing-card {
     display: flex;
+    background-color: rgb(195, 209, 221);
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
     height: 310px;
     width: 300px;
-    align-items: flex-start;
-    padding: 10px 20px;
-    justify-content: space-around;
-    flex-direction: column;
-    gap: 2px;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 17px;
+    padding: 10px 30px;
+    margin: 20px auto;
     img {
       height: 150px;
       width: 100%;
@@ -84,17 +73,15 @@
   .listing-card:hover {
     scale: 1.05;
     transition: all 500ms;
-    box-shadow: 0 0 15px 0 red;
-    /* width: 320px; */
-
+    /* box-shadow: 0 0 15px 0 red; */
+    /* 
     img {
       scale: 1.05;
       transition: all 500ms;
     }
     p {
-      /* font-weight: 600; */
       transition: all 500ms;
-    }
+    } */
   }
   .card-booked {
     background-color: rgb(158, 158, 158);
@@ -108,4 +95,15 @@
       transition: all 500ms;
     }
   }
+}
+.react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+}
+
+.custom-dot-list-style button {
+  border: none;
+  background: rgb(255, 68, 68);
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: rgb(255, 68, 68) !important;
 }

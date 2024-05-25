@@ -164,20 +164,8 @@ const DonationDetails = () => {
             color: 'red',
           }}
         >
-          You already booked this item
+          You booked this item
         </p>
-        //   <p
-        //   style={{
-        //     textAlign: 'center',
-        //     fontWeight: 'bold',
-        //     textTransform: 'uppercase',
-        //     color: 'red',
-        //   }}
-        // >
-        //   {yourListing.user._id == getLoggedInId()
-        //     ? 'You already booked this item'
-        //     : 'this item is already booked by someone else'}
-        // </p>
       )}
     </div>
   );

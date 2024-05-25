@@ -55,17 +55,16 @@ const Login = () => {
       const credentialResponseDecoded = jwtDecode(
         credentialResponse.credential
       );
-      console.log(credentialResponseDecoded);
       const response = await customAxios.post('/donor/google', {
         name: credentialResponseDecoded.name,
         email: credentialResponseDecoded.email,
-        image: credentialResponseDecoded.picture,
+        image: credentialResponse && credentialResponseDecoded.picture,
         password: generator.generate({
           length: 10,
           numbers: true,
         }),
       });
-      if (response) {
+      if (response.data && response.data.token) {
         localStorage.setItem('token', response.data.token);
       }
       toast.success('Login successfull', {

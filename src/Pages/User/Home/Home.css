@@ -14,24 +14,23 @@
 }
 
 .user-home-main-main-container-donations {
-  display: flex;
-  gap: 25px;
-  padding: 20px 0px;
+  margin: 30px auto;
+  box-shadow: 0 0 10px grey;
+  height: 350px;
+  border-radius: 8px;
 
   .listing-card {
     display: flex;
+    background-color: rgb(226, 236, 244);
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
     height: 310px;
     width: 300px;
-    align-items: flex-start;
-    padding: 10px 20px;
-    justify-content: space-around;
-    flex-direction: column;
-    gap: 2px;
-    box-shadow: 0 0 2px 0 black;
+    padding: 10px 30px;
+    margin: 20px auto;
 
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 17px;
     img {
       height: 150px;
       width: 100%;
@@ -71,14 +70,13 @@
   .listing-card:hover {
     scale: 1.03;
     transition: all 500ms;
-    box-shadow: 0 0 10px 0 rgb(223, 115, 115);
-    border: none;
+
     /* width: 320px; */
 
-    img {
+    /* img {
       scale: 1.05;
       transition: all 500ms;
-    }
+    } */
     /* p {
       font-weight: 600;
       transition: all 500ms;
@@ -100,8 +98,20 @@
 }
 .p-isEmpty {
   font-weight: 600;
-  margin-top: 50px;
+  padding-top: 150px;
   color: rgb(149, 32, 32);
   font-size: larger;
   text-transform: uppercase;
+  text-align: center;
+}
+.react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+}
+
+.custom-dot-list-style button {
+  border: none;
+  background: rgb(255, 68, 68);
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: rgb(255, 68, 68) !important;
 }
