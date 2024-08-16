@@ -28,6 +28,7 @@ const DonorHome = () => {
 
   const [data, setData] = useState([]);
   const [listing, setListings] = useState([]);
+
   const navigate = useNavigate();
   const getAvatar = async () => {
     const response = await customAxios.get(`/donor/profile/${getLoggedInId()}`);
@@ -41,6 +42,20 @@ const DonorHome = () => {
   const onClickCard = id => {
     navigate(`/donor/listingDetails/${id}`);
   };
+
+  const onChangeSearchBar = async e => {
+    try {
+      const response = await customAxios.get(
+        `/listing/search/item?title=${
+          e.target.value
+        }&donorId=${getLoggedInId()}`
+      );
+      setListings(response.data);
+    } catch (error) {
+      console.error('Error fetching listings:', error);
+    }
+  };
+
   useEffect(() => {
     getAvatar();
     getYourLisings();
@@ -49,6 +64,13 @@ const DonorHome = () => {
     <div className="donor-home-main">
       <NavDonor />
       <p className="hea">Welcome {data.name}</p>;
+      <div className="search-bar">
+        <input
+          type="text"
+          onChange={onChangeSearchBar}
+          placeholder="Search donations"
+        />
+      </div>
       <div className="donor-home-main-donor-listings">
         <p className="header">Your Listings..</p>
         {listing.length > 0 ? (

@@ -21,7 +21,6 @@ const Home = () => {
     setDonations(response.data);
   };
 
-  // console.log(user);
   console.log(donations);
 
   const onClickCard = id => {
@@ -52,7 +51,7 @@ const Home = () => {
   }, []);
   return (
     <div className="user-home-main">
-      <NavUser />
+      <NavUser setDonations={setDonations} />
       <div className="user-home-main-heading">
         <p>
           Welcome <span>{user.name}</span>

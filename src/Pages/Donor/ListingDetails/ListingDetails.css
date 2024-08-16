@@ -1,6 +1,7 @@
 .listingDetails-main-main {
   min-height: 100vh;
   max-width: 100vw;
+  user-select: none;
 }
 .listing-details-main {
   height: 99%;

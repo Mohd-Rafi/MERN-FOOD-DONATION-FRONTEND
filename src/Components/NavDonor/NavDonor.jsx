@@ -21,7 +21,7 @@ const NavDonor = props => {
   const getProfileDetails = async () => {
     const response = await customAxios.get(`/donor/profile/${getLoggedInId()}`);
     setData(response.data);
-    // console.log(response.data);
+    console.log(response.data);
   };
   const onChange = (e, key) => {
     setData({ ...data, [key]: e.target.value });
@@ -103,6 +103,7 @@ const NavDonor = props => {
   return (
     <div className="navdonor">
       <img src="/logo1.png" alt="" />
+
       <div className="navdonor-right-items">
         <NavLink to={'/donor/home'} className="navdonor-link">
           Home
